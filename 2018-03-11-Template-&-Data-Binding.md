@@ -38,11 +38,11 @@ published: true
 
 * 컴포넌트의 deleteHero 라는 메소드를 참조하고 있다. 선언 영역은 템플릿 자신의 영역에 있는 속성을 참고 할수도 있다.
 
-<button (click)="onSave($event)">Save</button>
-
-<button *ngFor="let hero of heroes" (click)="deleteHero(hero)">{{hero.name}}</button>
-
-<form #heroForm (ngSubmit)="onSubmit(heroForm)"> ... </form>
+<pre>
+&lt;button (click)="onSave($event)"&gt;Save&lt;/button&gt;
+&lt;button *ngFor="let hero of heroes" (click)="deleteHero(hero)"&gt;{{hero.name}}&lt;/button&gt;
+&lt;form #heroForm (ngSubmit)="onSubmit(heroForm)"&gt; ... &lt;/form&gt;
+</pre>
 
 * $event  현재 엘리멘트의 이벤트를 넘겨줌
 
