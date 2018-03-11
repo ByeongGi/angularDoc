@@ -60,7 +60,7 @@ $event  현재 엘리멘트의 이벤트를 넘겨줌
 
 One-way : Interpolation, Property, Attribute, Class, Style
 
-		{{expression}}
+{{expression}}
 
 [target]="expression"
 
@@ -68,13 +68,13 @@ bind-target="expression"
 
 One-way : Event
 
-		(target)="statement"
+(target)="statement"
 
 on-target="statement"
 
 Two-way : 
 
-		[(target)]="expression"
+[(target)]="expression"
 
 bindon-target="expression"
 
