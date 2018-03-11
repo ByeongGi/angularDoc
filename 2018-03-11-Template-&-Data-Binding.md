@@ -50,8 +50,6 @@ $event  현재 엘리멘트의 이벤트를 넘겨줌
 
 템플릿 태그의 참조값(#heroForm)을 onSubmit 메서드의 인자로 넘길수 있다.
 
-
-
         4. [Statement guidelines](https://angular.io/guide/template-syntax#statement-guidelines)
 
 템플릿 표현식은 복잡한 템플릿 선언을 쓰는것을 피하라. 한 메서드 또는 간단한 메소드 할당은 일반적이다.
@@ -60,23 +58,23 @@ $event  현재 엘리멘트의 이벤트를 넘겨줌
 
     5. [Binding syntax: An overview](https://angular.io/guide/template-syntax#binding-syntax-an-overview)
 
-* One-way : Interpolation, Property, Attribute, Class, Style
+One-way : Interpolation, Property, Attribute, Class, Style
 
-			{{expression}}
+		{{expression}}
 
 [target]="expression"
 
 bind-target="expression"
 
-* One-way : Event
+One-way : Event
 
-			(target)="statement"
+		(target)="statement"
 
 on-target="statement"
 
-* Two-way : 
+Two-way : 
 
-			[(target)]="expression"
+		[(target)]="expression"
 
 bindon-target="expression"
 
