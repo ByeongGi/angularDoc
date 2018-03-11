@@ -32,7 +32,9 @@ published: true
 
 선언 영역은 일반적으로 컴포넌트 인스턴스이다.
 
-<button (click)="deleteHero()">Delete hero</button>
+<pre>
+&lt;button (click)="deleteHero()"&gt;Delete hero&lt;/button&gt;
+</pre>
 
 컴포넌트의 deleteHero 라는 메소드를 참조하고 있다.
 
