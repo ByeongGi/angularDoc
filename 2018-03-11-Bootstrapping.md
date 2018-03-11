@@ -83,15 +83,19 @@ Only @[NgModule](https://angular.io/api/core/NgModule) references go in the impo
 
 ### [Using directives with ](https://angular.io/guide/bootstrapping#using-directives-with-ngmodule)[@](https://angular.io/guide/bootstrapping#using-directives-with-ngmodule)[NgModule(@NgModule 과 디렉티브 사용하기)](https://angular.io/api/core/NgModule)
 
-Use the declarations array for directives. To use a directive, component, or pipe in a module, you must do a few things:
+Use the declarations array for directives. To use a directive, component, or pipe in a module, you must do a few things: 
 
-1. Export it from the file where you wrote it.
+directives를 declarations 배열로 사용하라. 모듈 안의  directive, component, 또는 pipe 를 사용하기 위해서 당신은 몇가지를 해야만 한다.
 
-2. Import it into the appropriate module.
+1. Export it from the file where you wrote it. 당신이 작성한 파일에서 Export 해라.
 
-3. Declare it in the @[NgModule](https://angular.io/api/core/NgModule) declarations array.
+2. Import it into the appropriate module. 적절한 모듈에 이것을 Import 해라.
+
+3. Declare it in the @[NgModule](https://angular.io/api/core/NgModule) declarations array. @[NgModule](https://angular.io/api/core/NgModule) declarations array 안에 선언하라.
 
 Those three steps look like the following. In the file where you create your directive, export it. The following example, named ItemDirective is the default directive structure that the CLI generates in its own file, item.directive.ts:
+
+3가지 단계는 다음과 같다. 당신의 디렉티브를 만든 곳에 파일안에서 , 디렉티브를 export 한다. 다음 예에는, item.directive.ts 파일에서 안에서 CLI 가 생성하는  ItemDirective로 이름이 붙여지는 것은  기본적인 디렉티브의 구조이다.
 
 <pre>
 import {[ Directive](https://angular.io/api/core/Directive) } from '@angular/core';@[Directive](https://angular.io/api/core/Directive)({  selector: '[appItem]'})export class ItemDirective {// code goes here  constructor() { }}
@@ -99,11 +103,15 @@ import {[ Directive](https://angular.io/api/core/Directive) } from '@angular/cor
 
 The key point here is that you have to export it so you can import it elsewhere. Next, import it into the NgModule, in this example app.module.ts, with a JavaScript import statement:
 
+여기서 핵심은 이 디렉티브를 어는 곳이나 import 가 가능하도록 export 하는것이다. 다음으로는, 이것을 이 예시에서는 app.module.ts에서 JavaScript import 선언을 하여  NgModule 에 import 한다.
+
 <pre>
 import { ItemDirective } from './item.directive';
 </pre>
 
 And in the same file, add it to the @[NgModule](https://angular.io/api/core/NgModule) declarations array:
+
+그리고 같은 파일안에서  @NgModule declarations array  에 디렉티브를 선언한다.
 
 <pre>
 declarations: [  AppComponent,  ItemDirective],
@@ -112,6 +120,10 @@ declarations: [  AppComponent,  ItemDirective],
 Now you could use your ItemDirective in a component. This example uses AppModule, but you'd do it the same way for a feature module. For more about directives, see [Attribute Directives](https://angular.io/guide/attribute-directives) and [Structural Directives](https://angular.io/guide/structural-directives). You'd also use the same technique for [pipes](https://angular.io/guide/pipes) and components.
 
 Remember, components, directives, and pipes belong to one module only. You only need to declare them once in your app because you share them by importing the necessary modules. This saves you time and helps keep your app lean.
+
+지금 당신이 컴포넌트 안에서 당신의 ItemDirective 를 사용할수 있다. 이 예시는 AppModule 을 사용하지만, 몇몇 다른 모듈에서도 같은 방법으로 해야만 한다. 더 많은 디렉티브들을 보고 싶다면, 속성 디렉티브들와 구조적 디렉티브를을 보라. 당신은 또한  [pipes](https://angular.io/guide/pipes) 그리고 components 대해서 같은 기술로 사용해야만 한다.
+
+기억하나,  components, directives, 그리고 pipes 오로지 한개의 모듈에 포함된다. 당신은 필수적인 모듈들을 포함함으로써 그것들을 공유하기 떄문에 앱에서 그것들을 선언해야만 한다. 이것은 당신의 시간을 줄여주고 앱이 유지되는데 도움을 준다.
 
 ### [The ](https://angular.io/guide/bootstrapping#the-imports-array)[imports](https://angular.io/guide/bootstrapping#the-imports-array)[ array](https://angular.io/guide/bootstrapping#the-imports-array)
 
