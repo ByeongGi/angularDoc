@@ -30,25 +30,23 @@ published: true
 
         3. [Statement context[선언 영역]](https://angular.io/guide/template-syntax#statement-context)
 
-선언 영역은 일반적으로 컴포넌트 인스턴스이다.
+* 선언 영역은 일반적으로 컴포넌트 인스턴스이다.
 
 <pre>
 &lt;button (click)="deleteHero()"&gt;Delete hero&lt;/button&gt;
 </pre>
 
-컴포넌트의 deleteHero 라는 메소드를 참조하고 있다.
+* 컴포넌트의 deleteHero 라는 메소드를 참조하고 있다. 선언 영역은 템플릿 자신의 영역에 있는 속성을 참고 할수도 있다.
 
-선언 영역은 템플릿 자신의 영역에 있는 속성을 참고 할수도 있다.
+<button (click)="onSave($event)">Save</button>
 
-<pre class="prettyprint">
-&lt;button (click)="onSave($event)"&gt;Save&lt;/button&gt;
-&lt;button *ngFor="let hero of heroes" (click)="deleteHero(hero)"&gt;{{hero.name}}&lt;/button&gt;
-&lt;form #heroForm (ngSubmit)="onSubmit(heroForm)"&gt; ... &lt;/form&gt;
-</pre>
+<button *ngFor="let hero of heroes" (click)="deleteHero(hero)">{{hero.name}}</button>
 
-$event  현재 엘리멘트의 이벤트를 넘겨줌
+<form #heroForm (ngSubmit)="onSubmit(heroForm)"> ... </form>
 
-템플릿 태그의 참조값(#heroForm)을 onSubmit 메서드의 인자로 넘길수 있다.
+* $event  현재 엘리멘트의 이벤트를 넘겨줌
+
+* 템플릿 태그의 참조값(#heroForm)을 onSubmit 메서드의 인자로 넘길수 있다.
 
         4. [Statement guidelines](https://angular.io/guide/template-syntax#statement-guidelines)
 
