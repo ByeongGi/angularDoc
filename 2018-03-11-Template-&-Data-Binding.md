@@ -32,11 +32,7 @@ published: true
 
 선언 영역은 일반적으로 컴포넌트 인스턴스이다.
 
-...javascirpt
-
 <button (click)="deleteHero()">Delete hero</button>
-
-....
 
 컴포넌트의 deleteHero 라는 메소드를 참조하고 있다.선언 영역은 템플릿 자신의 영역에 있는 속성을 참고 할수도 있다.
 
