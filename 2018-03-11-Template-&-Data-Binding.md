@@ -56,25 +56,27 @@ published: true
 
     5. [Binding syntax: An overview](https://angular.io/guide/template-syntax#binding-syntax-an-overview)
 
-One-way : Interpolation, Property, Attribute, Class, Style
+* One-way : Interpolation, Property, Attribute, Class, Style
 
+<pre>
 {{expression}}
-
 [target]="expression"
-
 bind-target="expression"
+</pre>
 
-One-way : Event
+* One-way : Event
 
+<pre>
 (target)="statement"
-
 on-target="statement"
+</pre>
 
-Two-way : 
+* Two-way : 
 
+<pre>
 [(target)]="expression"
-
 bindon-target="expression"
+</pre>
 
         5. [A new mental model](https://angular.io/guide/template-syntax#a-new-mental-model)
 
