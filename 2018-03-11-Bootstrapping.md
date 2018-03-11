@@ -129,23 +129,37 @@ Remember, components, directives, and pipes belong to one module only. You only 
 
 The module's imports array appears exclusively in the @[NgModule](https://angular.io/api/core/NgModule) metadata object. It tells Angular about other NgModules that this particular module needs to function properly.
 
-This list of modules are those that export components, directives, or pipes that the component templates in this module reference. In this case, the component is AppComponent, which references components, directives, or pipes in [BrowserModule](https://angular.io/api/platform-browser/BrowserModule), [FormsModule](https://angular.io/api/forms/FormsModule), or [HttpModule](https://angular.io/api/http/HttpModule). A component template can reference another component, directive, or pipe when the referenced class is declared in this module or the class was imported from another module.
+모듈들의 imports 배열은  오로지 @[NgModule](https://angular.io/api/core/NgModule) metadata object 에서 나타난다. 이것은 부분적인 기능적으로 적절하게 필요로 하는 또다른 NgModule들에 대해서 앵귤러는 나타낸다.
+
+This list of modules are those that export components, directives, or pipes that the component templates in this module reference. In this case, the component is AppComponent, which references components, directives, or pipes in [BrowserModule](https://angular.io/api/platform-browser/BrowserModule), [FormsModule](https://angular.io/api/forms/FormsModule), or [HttpModule](https://angular.io/api/http/HttpModule).
+
+이것은 모듈안에서 component 템플릿이 참조되게 components, directives, 또는 pipes 을 export 한 모듈들이다. 이 경우에는, [BrowserModule](https://angular.io/api/platform-browser/BrowserModule), [FormsModule](https://angular.io/api/forms/FormsModule), 또는 [HttpModule](https://angular.io/api/http/HttpModule) 안에 있는 components, directives, 또는 pipes 들을 AppComponent 가 참조한다.
+
+A component template can reference another component, directive, or pipe when the referenced class is declared in this module or the class was imported from another module.이 모듈안에서 참조된 클래스가 선언되거나 또는 이 클래스가 다른 모듈에서 포함되어 을때 , component template은 또다른 component, directive, 또는 pipe 을 참조할수 있다.
 
 You don't have any services to provide yet. But you will create some before long and you may chose to provide many of them here.
+
+당신은 이미 어떠한 서비스들로도 공급하지 않아도 된다. 하지만 당신은 조만간 서비스를 생성할것이고 여기에 많은 서비스를 공급하는것을 결정 할지도 모른다.
 
 ### The providers array
 
 The providers array is where you list the services the app needs. When you list services here, they are available app-wide. You can scope them when using feature modules and lazy loading. For more information, see [Providers](https://angular.io/guide/providers).
 
+providers 배열은 앱에서 필요한 서비스들을 나열하는 곳이다. 만약 당신이 서비스를 여기에 나열한다면, 서비스는 app 범위에 접근할수있따. 당신은 특정한 모듈들에서 사용하거나 lazy loading 시에 바라볼수있다. 더 많은 정보는 ,[Providers](https://angular.io/guide/providers)를 보라.
+
 ### [The ](https://angular.io/guide/bootstrapping#the-bootstrap-array)[bootstrap](https://angular.io/guide/bootstrapping#the-bootstrap-array)[ array](https://angular.io/guide/bootstrapping#the-bootstrap-array)
 
 The application launches by bootstrapping the root AppModule, which is also referred to as an entryComponent. Among other things, the bootstrapping process creates the component(s) listed in the bootstrap array and inserts each one into the browser DOM.
 
-Each bootstrapped component is the base of its own tree of components. Inserting a bootstrapped component usually triggers a cascade of component creations that fill out that tree.
+entryComponent 로써 참고되는 root AppModule 규동함으로써 어플리케이션은 시작한다. 다른 것들 중에서 , bootstrapping 과정은 bootstrap 배열안에 나열된 컴포넌트들 생성하도 브라우저 돔에 각각 삽입한다.
 
-While you can put more than one component tree on a host web page, most applications have only one component tree and bootstrap a single root component.
+Each bootstrapped component is the base of its own tree of components. Inserting a bootstrapped component usually triggers a cascade of component creations that fill out that tree. 
 
-This one root component is usually called AppComponent and is in the root module's bootstrap array.
+각각 bootstrapped 된 컴포넌트는 컴포넌트들의 자신의 뿌리의 베이스이다. bootstrapped 된 컴포넌트 들은 보통 트리로 커지는 컴포넌트 생성의 연속을 일으킨다.
+
+While you can put more than one component tree on a host web page, most applications have only one component tree and bootstrap a single root component. 당신은 host web page 에 하나의 컴포넌트 트리 이상을 놓을수 있기 때문에, 많은 어플리케이션은 오로지 하나의 컴포넌트 트리를 가지고 하나의 root 컴포넌트를 실행한다,
+
+This one root component is usually called AppComponent and is in the root module's bootstrap array. 하나의 root 컴포넌트는 보통 AppComponent 라고 부르고 root module의 bootstrap 배열 안에 있다.
 
 ### [More about Angular Modules](https://angular.io/guide/bootstrapping#more-about-angular-modules)
 
