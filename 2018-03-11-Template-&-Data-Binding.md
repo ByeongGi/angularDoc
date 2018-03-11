@@ -162,7 +162,7 @@ bindon-target="expression"
 
     16. [The ](https://angular.io/guide/template-syntax#the-any-type-cast-function-any-expression-)[$any](https://angular.io/guide/template-syntax#the-any-type-cast-function-any-expression-)[ type cast function (](https://angular.io/guide/template-syntax#the-any-type-cast-function-any-expression-)[$any( <expression> )](https://angular.io/guide/template-syntax#the-any-type-cast-function-any-expression-)[)](https://angular.io/guide/template-syntax#the-any-type-cast-function-any-expression-)
 
-    17. [Summary](https://angular.io/guide/template-syntax#summary)
+    17. Summary
 
 	inerpolation 표현식 안에서 연산과 함수 호출이 가능하다.
 
