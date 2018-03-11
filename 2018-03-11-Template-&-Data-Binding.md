@@ -34,7 +34,9 @@ published: true
 
 <button (click)="deleteHero()">Delete hero</button>
 
-컴포넌트의 deleteHero 라는 메소드를 참조하고 있다.	선언 영역은 템플릿 자신의 영역에 있는 속성을 참고 할수도 있다.
+컴포넌트의 deleteHero 라는 메소드를 참조하고 있다.
+
+선언 영역은 템플릿 자신의 영역에 있는 속성을 참고 할수도 있다.
 
 <button (click)="onSave($event)">Save</button>
 
