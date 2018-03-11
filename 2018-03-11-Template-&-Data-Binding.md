@@ -32,7 +32,7 @@ published: true
 
 선언 영역은 일반적으로 컴포넌트 인스턴스이다.
 
-...js
+...javascirpt
 
 <button (click)="deleteHero()">Delete hero</button>
 
