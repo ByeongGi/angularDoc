@@ -166,7 +166,9 @@ bindon-target="expression"
 
 	inerpolation 표현식 안에서 연산과 함수 호출이 가능하다.
 
-	<p>The sum of 1 + 1 is {{1 + 1 + getVal() }}</p> 
+<pre>
+ 	&lt;p&gt;The sum of 1 + 1 is {{1 + 1 + getVal() }}&lt;/p&gt; 
+</pre>
 
 	{{}} 안에서 많은 연산을 하지 않도록 주의한다. (|, $ 미지원 )
 
