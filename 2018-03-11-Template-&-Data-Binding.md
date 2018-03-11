@@ -8,7 +8,9 @@ published: true
 ---
 1. [Displaying Data](https://angular.io/guide/displaying-data)
 
-	*ngFor
+	
+
+*ngFor
 
 	*ngIf
 
