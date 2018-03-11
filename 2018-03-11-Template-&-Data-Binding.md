@@ -34,7 +34,7 @@ published: true
 
 <button (click)="deleteHero()">Delete hero</button>
 
-컴포넌트의 deleteHero 라는 메소드를 참조하고 있다.선언 영역은 템플릿 자신의 영역에 있는 속성을 참고 할수도 있다.
+컴포넌트의 deleteHero 라는 메소드를 참조하고 있다.	선언 영역은 템플릿 자신의 영역에 있는 속성을 참고 할수도 있다.
 
 <button (click)="onSave($event)">Save</button>
 
@@ -42,9 +42,9 @@ published: true
 
 <form #heroForm (ngSubmit)="onSubmit(heroForm)"> ... </form>
 
-* $event  현재 엘리멘트의 이벤트를 넘겨줌
+$event  현재 엘리멘트의 이벤트를 넘겨줌
 
-* 템플릿 태그의 참조값(#heroForm)을 onSubmit 메서드의 인자로 넘길수 있다.
+템플릿 태그의 참조값(#heroForm)을 onSubmit 메서드의 인자로 넘길수 있다.
 
 
 
