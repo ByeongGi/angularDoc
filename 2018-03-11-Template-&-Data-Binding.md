@@ -50,9 +50,9 @@ published: true
 
         4. [Statement guidelines](https://angular.io/guide/template-syntax#statement-guidelines)
 
-템플릿 표현식은 복잡한 템플릿 선언을 쓰는것을 피하라. 한 메서드 또는 간단한  메소드 할당은 일반적이다.
+* 템플릿 표현식은 복잡한 템플릿 선언을 쓰는것을 피하라. 한 메서드 또는 간단한  메소드 할당은 일반적이다.
 
-템플릿 표현식에 side-effect를 일으키는 복잡한 수식은 쓰지마라.
+* 템플릿 표현식에 side-effect를 일으키는 복잡한 수식은 쓰지마라.
 
     5. [Binding syntax: An overview](https://angular.io/guide/template-syntax#binding-syntax-an-overview)
 
