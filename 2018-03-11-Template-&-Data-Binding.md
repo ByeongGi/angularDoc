@@ -12,7 +12,7 @@ published: true
 
 *ngFor
 
-	*ngIf
+*ngIf
 
 	
 
